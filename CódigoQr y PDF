@@ -1,0 +1,50 @@
+#QR
+import pyqrcode
+
+def qrcode(link):
+    name = link
+    k = pyqrcode.create(name)
+    k.png("codigoqr.png", scale=10)
+    import os
+    os.system("codigoqr.png")
+qrcode("aaaaa")
+
+
+
+
+#PDF
+def PDF(receta, doctor, paciente):
+    pdf = FPDF("P","mm","A4")
+    pdf_h = 297
+    pdf_w = 210
+    pdf.add_page()
+    pdf.set_line_width(0.0)
+    pdf.line(0,99,210,99)
+    pdf.line(0,99*2,210,99*2)
+    pdf.image(name = "codigoqr.png", x= 6.0, y= 6.0, w=1586/35, h=1920/40, type= "PNG")
+    pdf.set_font('Arial', 'B', 25)
+    pdf.set_text_color(220, 50, 50)
+    pdf.set_xy(0,0)
+    pdf.cell(w = 210.0, h = 25.0, align = 'C', txt = "Información Receta", border = 0)
+    pdf.set_xy(0, 99)
+    pdf.cell(w = 210.0, h = 25.0, align = 'C', txt = "Información Doctor", border = 0)
+    pdf.set_xy(0, 99 * 2)
+    pdf.cell(w = 210.0, h = 25.0, align = 'C', txt = "Información Paciente", border = 0)
+    pdf.set_font('Arial', 'B', 12)
+    pdf.set_text_color(0,0,0)
+    pdf.set_xy(70, 25)
+    i = 0
+    for x in receta:
+        i += 5
+        pdf.set_xy(50, 15 + i)
+        pdf.cell(w = 155,h = 7,txt = x)
+    infoDoctor = ("Nombre: "+doctor[0]+"\nEspecialidad: "+doctor[1]+\
+    "\nHospital de residencia: "+doctor[2])
+    infoPaciente = ("Nombre: "+paciente[0]+"\nEdad: "+paciente[1]+\
+    "\nSexo: "+paciente[2]+"\nUbicación: "+paciente[3])
+    pdf.set_xy(10, 120)
+    pdf.multi_cell(w = 190, h = 7, txt= infoDoctor)
+    pdf.set_xy(10, 220)
+    pdf.multi_cell(w = 190, h = 7, txt= infoPaciente)
+    pdf.output("test.pdf","F")
+    os.system("test.pdf")
