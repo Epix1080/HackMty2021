@@ -1,0 +1,303 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/content/loginCSS.css" media="screen" />
+    <title>Medicinas del paciente</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div class="encabezado2">
+        <form action="/logout" method="get">
+            <button class="botonsesion" style="width:100%">Cerrar Sesión</button>
+        </form>
+        <form action="/patients" method="get">
+            <button class="botonsesion" style="width:100%">Pacientes</button>
+        </form>
+    </div>
+    {% if items %}
+    <div class ="usuario" style="text-align:center">
+        <b>Usurario: </b><b>{{ items }}</b>
+    </div>
+    {% endif %}
+    <div class="agmed" style="text-align:center">
+        <p class="labels">Agregar medicina</p>
+        <p class="labels2">Medicamento</p>
+        <input class="input1">
+        <p class="labels2">Cantidad</p>
+        <input type="number" class="input2">
+        <p class="labels2">Horario</p>
+        <select class="input2">
+            <option>Domingo</option>
+            <option>Lunes</option>
+            <option>Martes</option>
+            <option>Miércoles</option>
+            <option>Jueves</option>
+            <option>Viernes</option>
+            <option>Sábado</option>
+        </select>
+        <p class="labels2">Número de semanas</p>
+        <input type="number" class="input2">
+        <p class="labels2">Comentarios</p>
+        <input class="input1">
+        <button class="botonsesion">Añadir</button>
+    </div>
+    <table class="semana">
+        <tr>
+            <th class="dias">HORA</th>
+            <th class="dias">DOMINGO</th>
+            <th class="dias">LUNES</th>
+            <th class="dias">MARTES</th>
+            <th class="dias">MIÉRCOLES</th>
+            <th class="dias">JUEVES</th>
+            <th class="dias">VIERNES</th>
+            <th class="dias">SÁBADO</th>
+        </tr>
+        <tr>
+            <td class="horas">12 A.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="medsPrueba"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">1 A.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="medsPrueba"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">2 A.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">3 A.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">4 A.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">5 A.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">6 A.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">7 A.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">8 A.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">9 A.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">10 A.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">11 A.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">12 P.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="medsPrueba"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">1 P.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">2 P.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">3 P.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">4 P.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">5 P.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">6 P.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">7 P.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="medsPrueba"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">8 P.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">9 P.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">10 P.M.</td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+        <tr>
+            <td class="horas">11 P.M.</td>
+            <td class="medsPrueba"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+            <td class="meds"></td>
+        </tr>
+    </table>
+    <table class="listameds">
+    </table>
+
+</body>
+</html>

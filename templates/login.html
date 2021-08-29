@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="static/content/loginCSS.css" media="screen"/>
+        <title>Iniciar sesión</title>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <div class="encabezado">
+
+        </div>
+
+        <div class="registrodoctor">
+            <h1>Ingresar</h1>
+            <form action="/login" method="post">
+                <h2>Usuario</h2>
+                <input class="input1" name="username">
+                <h2>Contraseña</h2>
+                <input class="input1" type="password" name="password">
+                <br />
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <ul style="list-style-type:none" class=flashes>
+                    {% for message in messages %}
+                    <li class="alerts" style="text-align:center">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% endwith %}
+                <button class="botonsesion">Iniciar sesión</button>
+            </form>
+        </div>
+    </body>
+</html>
